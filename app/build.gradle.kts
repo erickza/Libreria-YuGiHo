@@ -51,8 +51,8 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
+    //Corutinas e Iconos
     implementation(libs.kotlinx.coroutines.android)
-
     implementation(libs.compose.icons.extended)
 
     // Navigation Compose

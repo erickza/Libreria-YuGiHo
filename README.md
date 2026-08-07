@@ -10,7 +10,7 @@ distribución del proyecto, también MVVM, que permite el manejo y control de es
 
 Tecnologías utilizadas: Retrofit, Dagger Hilt, Corutinas, Flow, Room
 
-Librerias: Navigation, Coil, Retrofit, Dagger Hilt, Room
+Librerias: Navigation, Coil, Retrofit, Dagger Hilt, Room e Iconos extendidos 
 
 Cómo ejecutar el proyecto: Se buscaron versiones estables para evitar configuraciones extra,
 por lo que solo con descargar las librerias del gradle deberia de poder correr la app sin problema
