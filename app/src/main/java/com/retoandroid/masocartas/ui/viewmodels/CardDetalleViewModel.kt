@@ -3,27 +3,19 @@ package com.retoandroid.masocartas.ui.viewmodels
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.retoandroid.masocartas.domain.model.Card
 import com.retoandroid.masocartas.domain.model.DetailContent
 import com.retoandroid.masocartas.domain.model.DetailSection
 import com.retoandroid.masocartas.domain.model.FavoriteItem
 import com.retoandroid.masocartas.domain.usecase.GetCardByIdUseCase
 import com.retoandroid.masocartas.domain.usecase.ObserveIsFavoriteUseCase
 import com.retoandroid.masocartas.domain.usecase.ToggleFavoriteUseCase
+import com.retoandroid.masocartas.ui.viewmodels.states.CardDetailUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
-data class CardDetailUiState(
-    val card: Card? = null,
-    val content: DetailContent? = null,
-    val isFavorite: Boolean = false,
-    val isLoading: Boolean = false,
-    val error: String? = null
-)
 
 @HiltViewModel
 class CardDetailViewModel @Inject constructor(

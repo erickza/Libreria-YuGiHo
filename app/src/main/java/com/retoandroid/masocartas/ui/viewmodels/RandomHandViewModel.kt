@@ -2,20 +2,14 @@ package com.retoandroid.masocartas.ui.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.retoandroid.masocartas.domain.model.Card
 import com.retoandroid.masocartas.domain.usecase.GetRandomHandUseCase
+import com.retoandroid.masocartas.ui.viewmodels.states.RandomHandUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
-data class RandomHandUiState(
-    val cards: List<Card> = emptyList(),
-    val isLoading: Boolean = false,
-    val error: String? = null
-)
 
 @HiltViewModel
 class RandomHandViewModel @Inject constructor(

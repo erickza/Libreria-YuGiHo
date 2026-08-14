@@ -7,6 +7,7 @@ import com.retoandroid.masocartas.domain.model.FavoriteItem
 import com.retoandroid.masocartas.domain.usecase.GetCardsUseCase
 import com.retoandroid.masocartas.domain.usecase.GetFavoritesUseCase
 import com.retoandroid.masocartas.domain.usecase.ToggleFavoriteUseCase
+import com.retoandroid.masocartas.ui.viewmodels.states.CardsUiState
 import com.retoandroid.masocartas.util.Constants
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
@@ -16,17 +17,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
-data class CardsUiState(
-    val cards: List<Card> = emptyList(),
-    val favoriteIds: Set<Long> = emptySet(),
-    val isLoading: Boolean = false,
-    val isLoadingMore: Boolean = false,
-    val error: String? = null,
-    val searchQuery: String = "",
-    val offset: Int = 0,
-    val endReached: Boolean = false
-)
 
 @HiltViewModel
 class CardsListViewModel @Inject constructor(
