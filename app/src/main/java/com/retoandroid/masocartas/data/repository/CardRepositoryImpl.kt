@@ -62,16 +62,4 @@ class CardRepositoryImpl @Inject constructor(
             cached.map { it.toDomain() }
         }
     }
-
-    private fun CardCacheEntity.toDomain() = Card(
-        id = id, name = name, type = type, desc = desc, race = race,
-        archetype = archetype, atk = atk, def = def, level = level,
-        imageUrl = imageUrl, sets = emptyList(), price = null
-    )
-
-    private fun FavoriteEntity.toDomain() = Card(
-        id = id, name = name, type = "Sin conexión", desc = "Información completa no disponible sin internet",
-        race = null, archetype = null, atk = null, def = null, level = null,
-        imageUrl = imageUrl, sets = emptyList(), price = null
-    )
 }

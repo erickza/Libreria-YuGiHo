@@ -3,15 +3,12 @@ package com.retoandroid.masocartas.data.repository
 import com.retoandroid.masocartas.data.local.dao.FavoriteDao
 import com.retoandroid.masocartas.data.local.entity.FavoriteEntity
 import com.retoandroid.masocartas.domain.model.FavoriteItem
+import com.retoandroid.masocartas.domain.repository.FavoriteRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
-interface FavoriteRepository {
-    fun getFavorites(): Flow<List<FavoriteItem>>
-    fun isFavorite(id: Long): Flow<Boolean>
-    suspend fun toggleFavorite(item: FavoriteItem, isCurrentlyFavorite: Boolean)
-}
+
 
 class FavoriteRepositoryImpl @Inject constructor(
     private val dao: FavoriteDao

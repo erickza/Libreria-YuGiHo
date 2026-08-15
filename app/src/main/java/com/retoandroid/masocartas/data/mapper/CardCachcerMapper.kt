@@ -16,7 +16,7 @@ fun CardCacheEntity.toDomain() = Card(
 )
 
 fun FavoriteEntity.toDomain() = Card(
-    id = id, name = name, type = "", desc = "Sin conexión: información limitada",
+    id = id, name = name, type = "Sin conexión", desc = "Información completa no disponible sin internet",
     race = null, archetype = null, atk = null, def = null, level = null,
     imageUrl = imageUrl, sets = emptyList(), price = null
 )
